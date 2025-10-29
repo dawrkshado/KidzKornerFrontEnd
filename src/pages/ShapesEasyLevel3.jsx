@@ -4,7 +4,8 @@ import { DndContext, useDraggable, useDroppable, pointerWithin } from "@dnd-kit/
 import heptagonDroppable from "../assets/Shapes/ShapesEasy/heptagonDroppable.webp"
 import heptagonDraggable from "../assets/Shapes/ShapesEasy/heptagonDraggable.webp"
 import diamondDraggable from "../assets/Shapes/ShapesEasy/diamondDraggable.webp"
-import diamondDropppable from "../assets/Shapes/ShapesEasy/diamondDroppable.webp"
+import diamondDroppable from "../assets/Shapes/ShapesEasy/diamondDroppable.webp"
+import pentagonDroppable from "../assets/Shapes/ShapesEasy/pentagonDroppable.webp"
 import pentagonDraggable from "../assets/Shapes/ShapesEasy/pentagonDraggable.webp"
 import bg from "../assets/Shapes/ShapesEasy/lvl3Bg.webp"
 
@@ -108,12 +109,14 @@ function ShapesEasyLevel3() {
           />
         )}
 
+        
         {!dropped ["pentagon"] && (
           <Draggable
             id = "pentagon"
-            shape={<img src={pentagonDraggable} alt="image of shape of a heart" className=" h-[70px] hover:cursor-grab"/>}
+            shape={<img src={pentagonDraggable} alt="diamond shape in green" className="h-[70px]"/>}
           />
         )}
+
       </div >
 
 
@@ -132,7 +135,7 @@ function ShapesEasyLevel3() {
 
         <Droppable
           id = "diamond"
-          shape={<img src={diamondDropppable} alt="transparent oval shape" className=""/>}
+          shape={<img src={diamondDroppable} alt="transparent diamond" className=""/>}
           placedShape={
           dropped["diamond"] && (<Draggable
           id="diamond"
@@ -141,10 +144,10 @@ function ShapesEasyLevel3() {
         />
 
 
-        {/* Pentagon droppable - missing pentagonDroppable.webp file */}
+
         <Droppable
           id = "pentagon"
-          shape={<div className="w-[160px] h-[160px] border-2 border-dashed border-gray-400 flex items-center justify-center text-gray-500">Pentagon</div>}
+          shape={<img src={pentagonDroppable} alt="transparent pentagon" className=""/>}
           placedShape={
           dropped["pentagon"] && (<Draggable
           id="pentagon"
