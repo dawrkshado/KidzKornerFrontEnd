@@ -14,11 +14,17 @@ export default defineConfig({
   },
   plugins: [react() , tailwindcss()],
  server: {
+
+    allowedHosts:{
+      https:"//kidzkorner.onrender.com"
+    },
     watch: {
       usePolling: true,
-      interval: 100, // ms
+      interval: 100,
     },
     host: true,
     port: 5173
   }
+
+
 })
